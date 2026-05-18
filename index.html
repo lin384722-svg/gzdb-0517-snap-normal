@@ -3,163 +3,599 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>达播春12期正常班快照 · 0517</title>
+<title>春12期（05/17）正常班快照</title>
 <style>
-  :root {--primary:#1a3a6b;--primary-dark:#0f2548;--bg:#f0f4fa;--card:#fff;--text:#1e293b;--muted:#64748b;--red:#ef4444;--blue:#3b82f6;--teal:#10b981;--amber:#f59e0b;--border:#e2e8f0;}
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);font-size:14px;}
-  .header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:24px 20px 20px;}
-  .header h1{font-size:20px;font-weight:700;}
-  .header .sub{font-size:13px;opacity:.7;margin-top:4px;}
-  .header .date-badge{display:inline-block;background:rgba(255,255,255,.15);border-radius:20px;padding:3px 12px;font-size:12px;margin-top:10px;}
-  .container{max-width:960px;margin:0 auto;padding:16px;}
-  .kpi-grid{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;}
-  .kpi-card{flex:1 1 140px;background:var(--card);border-radius:12px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.06);min-width:120px;}
-  .kpi-label{font-size:12px;color:var(--muted);margin-bottom:4px;}
-  .kpi-value{font-size:24px;font-weight:700;color:var(--primary);}
-  .kpi-sub{font-size:11px;color:var(--muted);margin-top:2px;}
-  .section{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.06);margin-bottom:16px;}
-  .section-title{font-size:15px;font-weight:700;color:var(--primary);margin-bottom:12px;display:flex;align-items:center;gap:6px;}
-  .section-title .badge{background:var(--bg);border-radius:6px;padding:2px 8px;font-size:12px;font-weight:400;color:var(--muted);}
-  table{width:100%;border-collapse:collapse;}
-  th{background:var(--bg);color:var(--muted);font-size:12px;font-weight:600;padding:8px 10px;text-align:left;}
-  td{padding:8px 10px;border-bottom:1px solid var(--border);font-size:13px;}
-  tr:last-child td{border-bottom:none;}
-  tr:hover td{background:#f8fafc;}
-  .red{color:var(--red);}
-  .prog-bar-wrap{position:relative;background:#e2e8f0;border-radius:4px;height:18px;min-width:80px;}
-  .prog-bar{background:linear-gradient(90deg,var(--blue),#60a5fa);height:100%;border-radius:4px;}
-  .prog-label{position:absolute;left:50%;top:0;transform:translateX(-50%);font-size:11px;line-height:18px;font-weight:600;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.3);}
-  .speed-actual{font-weight:600;}
-  .speed-detail{color:var(--muted);font-size:11px;}
-  .daily-each{color:var(--muted);font-size:12px;}
-  details{margin-bottom:8px;}
-  details[open] summary{border-bottom:1px solid var(--border);margin-bottom:8px;}
-  .ch-summary{cursor:pointer;padding:10px;border-radius:8px;background:#f8fafc;font-weight:600;color:var(--primary);list-style:none;display:flex;align-items:center;gap:8px;}
-  .ch-summary:hover{background:var(--bg);}
-  .ch-cnt{background:var(--primary);color:#fff;border-radius:10px;padding:1px 8px;font-size:12px;font-weight:400;}
-  .ch-table-wrap{overflow-x:auto;width:100%;}
-  .inf-table{width:100%;border-collapse:collapse;}
-  .inf-table th,.inf-table td{padding:7px 10px;font-size:13px;}
-  .city-name{font-weight:600;width:80px;}
-  .city-total{width:50px;text-align:center;}
-  .city-bar{display:flex;border-radius:4px;overflow:hidden;height:24px;min-width:100px;}
-  .city-seg{display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600;overflow:hidden;min-width:20px;}
-  .t2-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  .amaze-data{background:#eff6ff;border-radius:8px;padding:12px;margin-bottom:12px;}
-  .amaze-row{display:flex;gap:16px;flex-wrap:wrap;}
-  .amaze-item{text-align:center;min-width:80px;}
-  .amaze-num{font-size:22px;font-weight:700;color:var(--primary);}
-  .amaze-label{font-size:11px;color:var(--muted);margin-top:2px;}
-  .amaze-pct{font-size:12px;color:var(--blue);font-weight:600;}
-  @media(max-width:600px){
-    .kpi-grid{gap:8px;}
-    .kpi-card{flex:1 1 100px;padding:12px;}
-    .kpi-value{font-size:20px;}
-    .t2-grid{grid-template-columns:1fr;}
-    .ch-table-wrap,.inf-table{overflow-x:auto;}
-    .inf-table{min-width:400px;}
-    table{min-width:400px;}
-  }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #f0f4fa; color: #1a2a4a; font-size: 14px; }
+.header { background: linear-gradient(135deg, #1a3a6b 0%, #0f2548 100%); color: white; padding: 20px 24px 16px; }
+.header h1 { font-size: 20px; font-weight: 700; letter-spacing: 0.5px; }
+.header .sub { font-size: 13px; opacity: 0.75; margin-top: 4px; }
+.kpi-bar { display: flex; flex-wrap: wrap; gap: 12px; padding: 16px; background: white; border-bottom: 1px solid #e0e8f4; }
+.kpi-card { flex: 1 1 130px; background: #f7f9fd; border: 1px solid #dde6f5; border-radius: 8px; padding: 12px 14px; text-align: center; }
+.kpi-card .label { font-size: 11px; color: #6b7fa3; margin-bottom: 4px; }
+.kpi-card .value { font-size: 22px; font-weight: 700; color: #1a3a6b; }
+.kpi-card .unit { font-size: 13px; color: #8899bb; font-weight: 400; }
+.section { margin: 12px 12px 0; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.section:last-child { margin-bottom: 20px; }
+.section-header { background: #1a3a6b; color: white; padding: 10px 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.3px; }
+.section-body { padding: 14px; }
+.tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+.tbl th { background: #eef3fb; color: #3a5285; font-weight: 600; padding: 8px 10px; text-align: center; white-space: nowrap; }
+.tbl td { padding: 7px 10px; text-align: center; border-bottom: 1px solid #f0f4fa; white-space: nowrap; }
+.tbl tr:last-child td { border-bottom: none; }
+.tbl tr:hover td { background: #f7faff; }
+.tbl .left { text-align: left; }
+.tbl .total-row td { font-weight: 700; background: #f0f4fa; }
+.progress-wrap { width: 100%; background: #e8eef8; border-radius: 20px; height: 8px; overflow: hidden; margin: 3px 0; }
+.progress-fill { height: 8px; border-radius: 20px; background: linear-gradient(90deg, #e67e22, #f39c12); }
+.red { color: #d9363e; font-weight: 600; }
+details { border-bottom: 1px solid #f0f4fa; }
+details:last-child { border-bottom: none; }
+details summary { padding: 9px 14px; cursor: pointer; font-weight: 600; color: #1a3a6b; background: #f7f9fd; user-select: none; list-style: none; display: flex; align-items: center; gap: 6px; }
+details summary::-webkit-details-marker { display: none; }
+details summary::before { content: '▶'; font-size: 10px; transition: transform 0.2s; }
+details[open] summary::before { transform: rotate(90deg); }
+details summary .ch-cnt { margin-left: auto; font-size: 12px; color: #6b7fa3; font-weight: 400; }
+details .detail-body { overflow-x: auto; width: 100%; }
+details .detail-body table { width: 100%; }
+.t2-cols { display: flex; gap: 16px; flex-wrap: wrap; }
+.t2-col { flex: 1 1 240px; }
+.t2-col h4 { font-size: 12px; color: #6b7fa3; margin-bottom: 8px; font-weight: 600; }
+.t2-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.t2-label { width: 80px; font-size: 12px; color: #3a5285; flex-shrink: 0; }
+.t2-bar-wrap { flex: 1; background: #e8eef8; border-radius: 20px; height: 14px; overflow: hidden; }
+.t2-bar-fill { height: 14px; border-radius: 20px; background: linear-gradient(90deg, #1a3a6b, #2563cc); display: flex; align-items: center; padding-left: 5px; min-width: 24px; }
+.t2-bar-fill span { font-size: 10px; color: white; font-weight: 600; }
+.t2-pct { width: 50px; font-size: 12px; font-weight: 600; color: #1a3a6b; text-align: right; flex-shrink: 0; }
+.city-stacked { display: flex; border-radius: 6px; overflow: hidden; height: 28px; width: 100%; }
+.city-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; color: white; font-weight: 600; overflow: hidden; }
+.note { font-size: 11px; color: #8899bb; margin-top: 8px; }
+.scroll-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+@media (max-width: 600px) {
+  .kpi-card { flex: 1 1 42%; padding: 10px; }
+  .kpi-card .value { font-size: 18px; }
+  .header h1 { font-size: 17px; }
+  .t2-cols { flex-direction: column; }
+  .section { margin: 8px 8px 0; }
+}
 </style>
 </head>
 <body>
-<div class="header">
-  <h1>🎓 达播春12期 · 正常班快照</h1>
-  <div class="sub">数据截至 2026-05-17 · 春12期（5月14日切入）</div>
-  <div class="date-badge">📅 0517</div>
-</div>
-<div class="container">
-  <div class="kpi-grid">
-    <div class="kpi-card"><div class="kpi-label">总订单</div><div class="kpi-value">1340</div><div class="kpi-sub">含退款（T+1）</div></div>
-    <div class="kpi-card"><div class="kpi-label">非退款订单</div><div class="kpi-value">1082</div><div class="kpi-sub">退款 258 单</div></div>
-    <div class="kpi-card"><div class="kpi-label">实时进量(amaze)</div><div class="kpi-value" style="color:#1a3a6b">1056</div><div class="kpi-sub">目标 3300 · 32.0%</div></div>
-    <div class="kpi-card"><div class="kpi-label">退款率</div><div class="kpi-value" style="color:#1a3a6b">19.3%</div><div class="kpi-sub">全量T+1口径</div></div>
-    <div class="kpi-card"><div class="kpi-label">加微率</div><div class="kpi-value">75.0%</div><div class="kpi-sub">769/1025</div></div>
-    <div class="kpi-card"><div class="kpi-label">主动加微率</div><div class="kpi-value">62.0%</div><div class="kpi-sub">636/1025</div></div>
-  </div>
 
-  <!-- ① amaze实时进量 -->
-  <div class="section">
-    <div class="section-title">① amaze 实时进量 <span class="badge">截图数据 · 实时</span></div>
-    <div class="amaze-data">
-      <div class="amaze-row">
-        <div class="amaze-item"><div class="amaze-num">1056</div><div class="amaze-label">总计</div><div class="amaze-pct">32.0%</div></div>
-        <div class="amaze-item"><div class="amaze-num">939</div><div class="amaze-label">新高一</div><div class="amaze-pct">33.5%</div></div>
-        <div class="amaze-item"><div class="amaze-num">80</div><div class="amaze-label">新高二</div><div class="amaze-pct">24.2%</div></div>
-        <div class="amaze-item"><div class="amaze-num">37</div><div class="amaze-label">新高三</div><div class="amaze-pct">22.4%</div></div>
-      </div>
-    </div>
-    <table>
-      <thead><tr><th>年级</th><th>实时进量</th><th>目标</th><th>进度达成</th><th>进度条</th></tr></thead>
+<div class="header">
+  <h1>春12期（05/17）正常班快照</h1>
+  <div class="sub">切期：5月14日中午，预计5月20日中午切春13 &nbsp;|&nbsp; 总目标：3300</div>
+</div>
+
+<!-- KPI -->
+<div class="kpi-bar">
+  <div class="kpi-card"><div class="label">总订单（当日）</div><div class="value">351<span class="unit"> 单</span></div></div>
+  <div class="kpi-card"><div class="label">未退款订单</div><div class="value">295<span class="unit"> 单</span></div></div>
+  <div class="kpi-card"><div class="label">正常班进量（当日）</div><div class="value">279<span class="unit"> 单</span></div></div>
+  <div class="kpi-card"><div class="label">退款率</div><div class="value">16.0<span class="unit"> %</span></div></div>
+  <div class="kpi-card"><div class="label">加微率</div><div class="value">65.9<span class="unit"> %</span></div></div>
+  <div class="kpi-card"><div class="label">主动加微率</div><div class="value">55.6<span class="unit"> %</span></div></div>
+</div>
+
+<!-- ① amaze实时进量 -->
+<div class="section">
+  <div class="section-header">① amaze实时进量（春12期）</div>
+  <div class="section-body">
+    <div class="scroll-wrap">
+    <table class="tbl">
+      <thead><tr><th class="left">年级</th><th>实时进量</th><th>目标</th><th>实时进度达成</th><th style="min-width:120px">进度条</th></tr></thead>
       <tbody>
-        <tr><td>新高一</td><td>939</td><td>2805</td><td>33.5%</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:33%"></div><span class="prog-label">33.5%</span></div></td></tr><tr><td>新高二</td><td>80</td><td>330</td><td>24.2%</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:24%"></div><span class="prog-label">24.2%</span></div></td></tr><tr><td>新高三</td><td>37</td><td>165</td><td>22.4%</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:22%"></div><span class="prog-label">22.4%</span></div></td></tr>
-        <tr style="font-weight:700"><td>合计</td><td>1056</td><td>3300</td><td>32.0%</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:32%"></div><span class="prog-label">32.0%</span></div></td></tr>
+        <tr><td class="left">新高一</td><td>939</td><td>2805</td><td>33.5%</td><td><div class="progress-wrap"><div class="progress-fill" style="width:33.5%"></div></div></td></tr>
+        <tr><td class="left">新高二</td><td>80</td><td>330</td><td>24.2%</td><td><div class="progress-wrap"><div class="progress-fill" style="width:24.2%"></div></div></td></tr>
+        <tr><td class="left">新高三</td><td>37</td><td>165</td><td>22.4%</td><td><div class="progress-wrap"><div class="progress-fill" style="width:22.4%"></div></div></td></tr>
+        <tr class="total-row"><td class="left">总计</td><td>1056</td><td>3300</td><td>32.0%</td><td><div class="progress-wrap"><div class="progress-fill" style="width:32.0%"></div></div></td></tr>
       </tbody>
     </table>
+    </div>
+    <div class="note">* amaze实时数据来自截图，与CSV口径略有差异</div>
   </div>
+</div>
 
-  <!-- ② 渠道对比表 -->
-  <div class="section">
-    <div class="section-title">② 渠道对比表 <span class="badge">当日 2026-05-17 · 大盘加微率65.9% 主动加微率55.6% 退款率16.0%</span></div>
-    <div style="overflow-x:auto"><table>
-      <thead><tr><th>渠道</th><th>正常班单量</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead>
-      <tbody><tr><td>最小年轮</td><td>268</td><td>64.6%</td><td class="val red">54.1%🔴</td><td class="val red">20.7%🔴</td></tr><tr><td>自然流</td><td>6</td><td>100.0%</td><td class="val">83.3%</td><td class="val red">25.0%🔴</td></tr><tr><td>领航</td><td>5</td><td>100.0%</td><td class="val">100.0%</td><td class="val">0.0%</td></tr></tbody>
-    </table></div>
+<!-- ② 渠道对比表 -->
+<div class="section">
+  <div class="section-header">② 渠道对比表 当日（0517）· 大盘：主动加微55.6% / 退款率16.0%</div>
+  <div class="section-body">
+    <div class="scroll-wrap">
+    <table class="tbl">
+      <thead><tr><th class="left">渠道</th><th>总订单</th><th>未退款</th><th>正常班单量</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead>
+      <tbody><tr>
+          <td class="left">最小年轮</td>
+          <td>338</td>
+          <td>282</td>
+          <td>268</td>
+          <td>64.6%</td>
+          <td class="red">54.1%🔴</td>
+          <td class="red">20.7%🔴</td>
+        </tr><tr>
+          <td class="left">自然流</td>
+          <td>8</td>
+          <td>8</td>
+          <td>6</td>
+          <td>100.0%</td>
+          <td>83.3%</td>
+          <td class="red">25.0%🔴</td>
+        </tr><tr>
+          <td class="left">领航</td>
+          <td>5</td>
+          <td>5</td>
+          <td>5</td>
+          <td>100.0%</td>
+          <td>100.0%</td>
+          <td>0.0%</td>
+        </tr><tr class="total-row">
+      <td class="left">全渠道合计</td>
+      <td>351</td>
+      <td>295</td>
+      <td>279</td>
+      <td>65.9%</td>
+      <td>55.6%</td>
+      <td>16.0%</td>
+    </tr></tbody>
+    </table>
+    </div>
+    <div class="note">🔴 主动加微率&lt;大盘(55.6%) 或 退款率&gt;大盘(16.0%) 标红</div>
   </div>
+</div>
 
-  <!-- ③ 年级流量达成 T+1 -->
-  <div class="section">
-    <div class="section-title">③ 年级流量达成 T+1 <span class="badge">截图数据 · 剩余 3 天 · 近3日均速 260/天</span></div>
-    <div style="overflow-x:auto"><table>
-      <thead><tr><th>年级</th><th>预估流量</th><th>总进度</th><th>剩余预期流速</th><th>实际流速（近3日均）</th><th>总进量</th><th>每日进量 (14/15/16/17)</th></tr></thead>
-      <tbody><tr><td>新高一</td><td>2805</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:32%"></div><span class="prog-label">32.3%</span></div></td><td>633/天</td><td><span class="speed-actual">230/天</span><br><small class="speed-detail">05-14: 220 / 05-15: 235 / 05-16: 212 / 05-17: 242</small></td><td>907</td><td class="daily-each">220 | 235 | 212 | 242</td></tr><tr><td>新高二</td><td>330</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:22%"></div><span class="prog-label">22.1%</span></div></td><td>86/天</td><td><span class="speed-actual">21/天</span><br><small class="speed-detail">05-14: 19 / 05-15: 19 / 05-16: 18 / 05-17: 25</small></td><td>73</td><td class="daily-each">19 | 19 | 18 | 25</td></tr><tr><td>新高三</td><td>165</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:24%"></div><span class="prog-label">23.6%</span></div></td><td>42/天</td><td><span class="speed-actual">10/天</span><br><small class="speed-detail">05-14: 5 / 05-15: 12 / 05-16: 6 / 05-17: 12</small></td><td>39</td><td class="daily-each">5 | 12 | 6 | 12</td></tr></tbody>
-    </table></div>
+<!-- ③ 年级流量达成 T+1 -->
+<div class="section">
+  <div class="section-header">③ 年级流量达成 T+1 切期：5月14日中午，预计5月20日中午切春13</div>
+  <div class="section-body">
+    <div class="scroll-wrap">
+    <table class="tbl">
+      <thead><tr>
+        <th class="left">年级</th><th>预估流量</th><th>总进度</th>
+        <th>剩余预期流速<br><span style="font-weight:400;font-size:11px">距目标还需/天</span></th>
+        <th>实际流速<br><span style="font-weight:400;font-size:11px">近3日均速</span></th>
+        <th>总进量</th>
+        <th>5/14进量</th><th>5/15进量</th><th>5/16进量</th><th>5/17进量</th>
+      </tr></thead>
+      <tbody><tr>
+          <td class="left">新高一</td>
+          <td>2,805</td>
+          <td>32%<div class="progress-wrap"><div class="progress-fill" style="width:32%"></div></div></td>
+          <td>633<br><span style="font-size:11px;color:#8899bb">单/天</span></td>
+          <td>230<br><span style="font-size:11px;color:#8899bb">近3日 235+212+242=689</span></td>
+          <td>907</td>
+          <td>220</td><td>235</td><td>212</td><td>242</td>
+        </tr><tr>
+          <td class="left">新高二</td>
+          <td>330</td>
+          <td>22%<div class="progress-wrap"><div class="progress-fill" style="width:22%"></div></div></td>
+          <td>86<br><span style="font-size:11px;color:#8899bb">单/天</span></td>
+          <td>21<br><span style="font-size:11px;color:#8899bb">近3日 19+18+25=62</span></td>
+          <td>73</td>
+          <td>19</td><td>19</td><td>18</td><td>25</td>
+        </tr><tr>
+          <td class="left">新高三</td>
+          <td>165</td>
+          <td>24%<div class="progress-wrap"><div class="progress-fill" style="width:24%"></div></div></td>
+          <td>42<br><span style="font-size:11px;color:#8899bb">单/天</span></td>
+          <td>10<br><span style="font-size:11px;color:#8899bb">近3日 12+6+12=30</span></td>
+          <td>39</td>
+          <td>5</td><td>12</td><td>6</td><td>12</td>
+        </tr><tr class="total-row">
+      <td class="left">总计</td>
+      <td>3,300</td>
+      <td>31%<div class="progress-wrap"><div class="progress-fill" style="width:31%"></div></div></td>
+      <td>761<br><span style="font-size:11px;color:#8899bb">单/天</span></td>
+      <td>260<br><span style="font-size:11px;color:#8899bb">近3日 266+236+279=781</span></td>
+      <td>1019</td>
+      <td>244</td><td>266</td><td>236</td><td>279</td>
+    </tr></tbody>
+    </table>
+    </div>
+    <div class="note">* 总进量数据来自T+1截图（新高一907/新高二73/新高三39）</div>
   </div>
+</div>
 
-  <!-- ④ 渠道×年级 -->
-  <div class="section">
-    <div class="section-title">④ 渠道×年级进量 <span class="badge">当日 2026-05-17</span></div>
-    <div style="overflow-x:auto"><table>
-      <thead><tr><th>渠道</th><th>合计</th><th>新高一</th><th>新高二</th><th>新高三</th></tr></thead>
-      <tbody><tr><td>最小年轮</td><td><strong>268</strong></td><td>231</td><td>25</td><td>12</td></tr><tr><td>自然流</td><td><strong>6</strong></td><td>6</td><td>0</td><td>0</td></tr><tr><td>领航</td><td><strong>5</strong></td><td>5</td><td>0</td><td>0</td></tr></tbody>
-    </table></div>
-  </div>
-
-  <!-- ⑤ 分达人进量 -->
-  <div class="section">
-    <div class="section-title">⑤ 分达人进量 <span class="badge">全量 · 大盘主动加微率 62.0% · 退款率 19.3%</span></div>
-    <details open><summary class="ch-summary">最小年轮 <span class="ch-cnt">968单</span></summary><div class="ch-table-wrap"><table class="inf-table"><thead><tr><th>达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead><tbody><tr><td>李老师讲初升高</td><td>162</td><td>79.6%</td><td class="val">64.8%</td><td class="val red">24.7%🔴</td></tr><tr><td>千佰惠公司聂老师</td><td>123</td><td>75.6%</td><td class="val red">60.2%🔴</td><td class="val red">27.6%🔴</td></tr><tr><td>李主任聊升学</td><td>83</td><td>55.4%</td><td class="val red">47.0%🔴</td><td class="val red">22.4%🔴</td></tr><tr><td>蔡稳稳</td><td>63</td><td>54.0%</td><td class="val red">34.9%🔴</td><td class="val">11.3%</td></tr><tr><td>刘老师讲中考a</td><td>54</td><td>90.7%</td><td class="val">75.9%</td><td class="val red">22.9%🔴</td></tr><tr><td>一线王老师讲选科</td><td>50</td><td>88.0%</td><td class="val">66.0%</td><td class="val red">19.4%🔴</td></tr><tr><td>王老师说选科</td><td>46</td><td>89.1%</td><td class="val">78.3%</td><td class="val red">30.3%🔴</td></tr><tr><td>田老师讲选科</td><td>42</td><td>83.3%</td><td class="val">78.6%</td><td class="val red">27.6%🔴</td></tr><tr><td>行知老师讲规划</td><td>41</td><td>80.5%</td><td class="val">68.3%</td><td class="val red">21.2%🔴</td></tr><tr><td>初升高升学规划.</td><td>37</td><td>73.0%</td><td class="val">64.9%</td><td class="val">9.8%</td></tr><tr><td>王老师聊升学</td><td>32</td><td>87.5%</td><td class="val">78.1%</td><td class="val red">20.0%🔴</td></tr><tr><td>郝老师聊选科-行知</td><td>28</td><td>96.4%</td><td class="val">82.1%</td><td class="val red">22.2%🔴</td></tr><tr><td>升学规划.田雨</td><td>22</td><td>81.8%</td><td class="val">72.7%</td><td class="val red">21.4%🔴</td></tr><tr><td>升学规划指导-马老师</td><td>19</td><td>36.8%</td><td class="val red">36.8%🔴</td><td class="val">9.5%</td></tr><tr><td>波波老师（初中升学）</td><td>17</td><td>76.5%</td><td class="val red">58.8%🔴</td><td class="val">10.5%</td></tr><tr><td>谢老师讲课堂</td><td>16</td><td>31.2%</td><td class="val red">25.0%🔴</td><td class="val">0.0%</td></tr><tr><td>青年教师讲选科</td><td>16</td><td>93.8%</td><td class="val">81.2%</td><td class="val red">20.0%🔴</td></tr><tr><td>宁老师讲选科</td><td>15</td><td>73.3%</td><td class="val red">60.0%🔴</td><td class="val red">31.8%🔴</td></tr><tr><td>董老师讲选科</td><td>14</td><td>100.0%</td><td class="val">85.7%</td><td class="val red">36.4%🔴</td></tr><tr><td>晶晶老师升学规划</td><td>13</td><td>84.6%</td><td class="val">69.2%</td><td class="val red">23.5%🔴</td></tr><tr><td>赵老师讲选科</td><td>12</td><td>16.7%</td><td class="val red">16.7%🔴</td><td class="val">14.3%</td></tr><tr><td>珊伊老师讲高考</td><td>12</td><td>91.7%</td><td class="val">66.7%</td><td class="val red">33.3%🔴</td></tr><tr><td>慧智升学</td><td>10</td><td>30.0%</td><td class="val red">20.0%🔴</td><td class="val red">37.5%🔴</td></tr><tr><td>高阶三规划</td><td>9</td><td>44.4%</td><td class="val red">22.2%🔴</td><td class="val red">25.0%🔴</td></tr><tr><td>小严老师初高阶提升课堂</td><td>7</td><td>85.7%</td><td class="val">71.4%</td><td class="val">0.0%</td></tr><tr><td>初升高升学规划</td><td>7</td><td>85.7%</td><td class="val">71.4%</td><td class="val">0.0%</td></tr><tr><td>初升高规划闫老师</td><td>6</td><td>66.7%</td><td class="val">66.7%</td><td class="val red">25.0%🔴</td></tr><tr><td>王老师升学</td><td>5</td><td>0.0%</td><td class="val red">0.0%🔴</td><td class="val">0.0%</td></tr><tr><td>高阶二规划</td><td>3</td><td>66.7%</td><td class="val red">33.3%🔴</td><td class="val red">40.0%🔴</td></tr><tr><td>黄老师讲选科</td><td>2</td><td>100.0%</td><td class="val">100.0%</td><td class="val">0.0%</td></tr><tr><td>孙老师思维课堂-一起考</td><td>1</td><td>0.0%</td><td class="val red">0.0%🔴</td><td class="val">0.0%</td></tr><tr><td>超超老师讲选科</td><td>1</td><td>100.0%</td><td class="val">100.0%</td><td class="val red">66.7%🔴</td></tr></tbody></table></div></details><details open><summary class="ch-summary">格物致知 <span class="ch-cnt">18单</span></summary><div class="ch-table-wrap"><table class="inf-table"><thead><tr><th>达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead><tbody><tr><td>樊老师读书分享</td><td>18</td><td>72.2%</td><td class="val red">55.6%🔴</td><td class="val red">21.7%🔴</td></tr></tbody></table></div></details><details open><summary class="ch-summary">领航 <span class="ch-cnt">17单</span></summary><div class="ch-table-wrap"><table class="inf-table"><thead><tr><th>达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead><tbody><tr><td>邢老师讲选科</td><td>7</td><td>100.0%</td><td class="val">100.0%</td><td class="val red">22.2%🔴</td></tr><tr><td>昭昭老师讲升学</td><td>6</td><td>100.0%</td><td class="val">100.0%</td><td class="val">14.3%</td></tr><tr><td>赵主任讲女生规划</td><td>3</td><td>66.7%</td><td class="val red">33.3%🔴</td><td class="val">0.0%</td></tr><tr><td>张利老师聊升学（慧润文化）</td><td>1</td><td>100.0%</td><td class="val">100.0%</td><td class="val">0.0%</td></tr></tbody></table></div></details><details open><summary class="ch-summary">合肥徽起 <span class="ch-cnt">4单</span></summary><div class="ch-table-wrap"><table class="inf-table"><thead><tr><th>达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead><tbody><tr><td>初升高入团规划大课堂</td><td>4</td><td>75.0%</td><td class="val">75.0%</td><td class="val red">63.6%🔴</td></tr></tbody></table></div></details><details open><summary class="ch-summary">山东深山 <span class="ch-cnt">1单</span></summary><div class="ch-table-wrap"><table class="inf-table"><thead><tr><th>达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead><tbody><tr><td>徐老师讲升学(欢喜）</td><td>1</td><td>100.0%</td><td class="val">100.0%</td><td class="val red">80.0%🔴</td></tr></tbody></table></div></details><details open><summary class="ch-summary">自然流 <span class="ch-cnt">17单</span></summary><div class="ch-table-wrap"><table class="inf-table"><thead><tr><th>达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead><tbody><tr><td>未知达人</td><td>17</td><td>88.2%</td><td class="val">70.6%</td><td class="val red">39.3%🔴</td></tr></tbody></table></div></details>
-  </div>
-
-  <!-- ⑥ T+2活跃率 -->
-  <div class="section">
-    <div class="section-title">⑥ T+2 活跃率 <span class="badge">全量 · 440/1025 = 42.9%</span></div>
-    <div class="t2-grid">
-      <div><div style="font-size:13px;font-weight:600;color:var(--muted);margin-bottom:8px">按渠道</div>
-        <table><thead><tr><th>渠道</th><th>活跃/总量</th><th>活跃率</th></tr></thead><tbody><tr><td>最小年轮</td><td>417/968</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:43%"></div><span class="prog-label">43.1%</span></div></td></tr><tr><td>格物致知</td><td>5/18</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:28%"></div><span class="prog-label">27.8%</span></div></td></tr><tr><td>自然流</td><td>8/17</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:47%"></div><span class="prog-label">47.1%</span></div></td></tr><tr><td>领航</td><td>7/17</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:41%"></div><span class="prog-label">41.2%</span></div></td></tr><tr><td>合肥徽起</td><td>3/4</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:75%"></div><span class="prog-label">75.0%</span></div></td></tr><tr><td>山东深山</td><td>0/1</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:0%"></div><span class="prog-label">0.0%</span></div></td></tr></tbody></table></div>
-      <div><div style="font-size:13px;font-weight:600;color:var(--muted);margin-bottom:8px">按年级</div>
-        <table><thead><tr><th>年级</th><th>活跃/总量</th><th>活跃率</th></tr></thead><tbody><tr><td>新高一</td><td>414/909</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:46%"></div><span class="prog-label">45.5%</span></div></td></tr><tr><td>新高二</td><td>20/81</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:25%"></div><span class="prog-label">24.7%</span></div></td></tr><tr><td>新高三</td><td>6/35</td><td><div class="prog-bar-wrap"><div class="prog-bar" style="width:17%"></div><span class="prog-label">17.1%</span></div></td></tr></tbody></table></div>
+<!-- ④ 渠道×年级 -->
+<div class="section">
+  <div class="section-header">④ 渠道和年级进量 当日（0517）</div>
+  <div class="section-body">
+    <div class="scroll-wrap">
+    <table class="tbl">
+      <thead><tr><th class="left">渠道</th><th>合计</th><th>新高一</th><th>新高二</th><th>新高三</th></tr></thead>
+      <tbody><tr>
+          <td class="left">最小年轮</td>
+          <td>268</td>
+          <td>231</td>
+          <td>25</td>
+          <td>12</td>
+        </tr><tr>
+          <td class="left">自然流</td>
+          <td>6</td>
+          <td>6</td>
+          <td>0</td>
+          <td>0</td>
+        </tr><tr>
+          <td class="left">领航</td>
+          <td>5</td>
+          <td>5</td>
+          <td>0</td>
+          <td>0</td>
+        </tr></tbody>
+    </table>
     </div>
   </div>
+</div>
 
-  <!-- ⑦ 城市线级 -->
-  <div class="section">
-    <div class="section-title">⑦ 城市线级分布 <span class="badge">当日 2026-05-17 · 正常班</span></div>
-    <div style="display:flex;gap:12px;margin-bottom:8px;font-size:12px">
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;border-radius:2px;background:#3b82f6;display:inline-block"></span>新高一</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;border-radius:2px;background:#10b981;display:inline-block"></span>新高二</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;border-radius:2px;background:#f59e0b;display:inline-block"></span>新高三</span>
+<!-- ⑤ 分达人进量 -->
+<div class="section">
+  <div class="section-header">⑤ 分达人进量（全量累计）· 按渠道可折叠展开 · 大盘主动加微率62.0% / 退款率19.3%</div>
+  <div class="section-body" style="padding:0">
+    <details open>
+          <summary>最小年轮 <span class="ch-cnt">968 单</span></summary>
+          <div class="detail-body">
+          <table class="tbl">
+            <thead><tr><th class="left">达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead>
+            <tbody><tr>
+              <td class="left">李老师讲初升高</td>
+              <td>162</td>
+              <td>79.6%</td>
+              <td>64.8%</td>
+              <td class="red">24.7%🔴</td>
+            </tr><tr>
+              <td class="left">千佰惠公司聂老师</td>
+              <td>123</td>
+              <td>75.6%</td>
+              <td class="red">60.2%🔴</td>
+              <td class="red">27.6%🔴</td>
+            </tr><tr>
+              <td class="left">李主任聊升学</td>
+              <td>83</td>
+              <td>55.4%</td>
+              <td class="red">47.0%🔴</td>
+              <td class="red">22.4%🔴</td>
+            </tr><tr>
+              <td class="left">蔡稳稳</td>
+              <td>63</td>
+              <td>54.0%</td>
+              <td class="red">34.9%🔴</td>
+              <td>11.3%</td>
+            </tr><tr>
+              <td class="left">刘老师讲中考a</td>
+              <td>54</td>
+              <td>90.7%</td>
+              <td>75.9%</td>
+              <td class="red">22.9%🔴</td>
+            </tr><tr>
+              <td class="left">一线王老师讲选科</td>
+              <td>50</td>
+              <td>88.0%</td>
+              <td>66.0%</td>
+              <td class="red">19.4%🔴</td>
+            </tr><tr>
+              <td class="left">王老师说选科</td>
+              <td>46</td>
+              <td>89.1%</td>
+              <td>78.3%</td>
+              <td class="red">30.3%🔴</td>
+            </tr><tr>
+              <td class="left">田老师讲选科</td>
+              <td>42</td>
+              <td>83.3%</td>
+              <td>78.6%</td>
+              <td class="red">27.6%🔴</td>
+            </tr><tr>
+              <td class="left">行知老师讲规划</td>
+              <td>41</td>
+              <td>80.5%</td>
+              <td>68.3%</td>
+              <td class="red">21.2%🔴</td>
+            </tr><tr>
+              <td class="left">初升高升学规划.</td>
+              <td>37</td>
+              <td>73.0%</td>
+              <td>64.9%</td>
+              <td>9.8%</td>
+            </tr><tr>
+              <td class="left">王老师聊升学</td>
+              <td>32</td>
+              <td>87.5%</td>
+              <td>78.1%</td>
+              <td class="red">20.0%🔴</td>
+            </tr><tr>
+              <td class="left">郝老师聊选科-行知</td>
+              <td>28</td>
+              <td>96.4%</td>
+              <td>82.1%</td>
+              <td class="red">22.2%🔴</td>
+            </tr><tr>
+              <td class="left">升学规划.田雨</td>
+              <td>22</td>
+              <td>81.8%</td>
+              <td>72.7%</td>
+              <td class="red">21.4%🔴</td>
+            </tr><tr>
+              <td class="left">升学规划指导-马老师</td>
+              <td>19</td>
+              <td>36.8%</td>
+              <td class="red">36.8%🔴</td>
+              <td>9.5%</td>
+            </tr><tr>
+              <td class="left">波波老师（初中升学）</td>
+              <td>17</td>
+              <td>76.5%</td>
+              <td class="red">58.8%🔴</td>
+              <td>10.5%</td>
+            </tr><tr>
+              <td class="left">谢老师讲课堂</td>
+              <td>16</td>
+              <td>31.2%</td>
+              <td class="red">25.0%🔴</td>
+              <td>0.0%</td>
+            </tr><tr>
+              <td class="left">青年教师讲选科</td>
+              <td>16</td>
+              <td>93.8%</td>
+              <td>81.2%</td>
+              <td class="red">20.0%🔴</td>
+            </tr><tr>
+              <td class="left">宁老师讲选科</td>
+              <td>15</td>
+              <td>73.3%</td>
+              <td class="red">60.0%🔴</td>
+              <td class="red">31.8%🔴</td>
+            </tr><tr>
+              <td class="left">董老师讲选科</td>
+              <td>14</td>
+              <td>100.0%</td>
+              <td>85.7%</td>
+              <td class="red">36.4%🔴</td>
+            </tr><tr>
+              <td class="left">晶晶老师升学规划</td>
+              <td>13</td>
+              <td>84.6%</td>
+              <td>69.2%</td>
+              <td class="red">23.5%🔴</td>
+            </tr><tr>
+              <td class="left">赵老师讲选科</td>
+              <td>12</td>
+              <td>16.7%</td>
+              <td class="red">16.7%🔴</td>
+              <td>14.3%</td>
+            </tr><tr>
+              <td class="left">珊伊老师讲高考</td>
+              <td>12</td>
+              <td>91.7%</td>
+              <td>66.7%</td>
+              <td class="red">33.3%🔴</td>
+            </tr><tr>
+              <td class="left">慧智升学</td>
+              <td>10</td>
+              <td>30.0%</td>
+              <td class="red">20.0%🔴</td>
+              <td class="red">37.5%🔴</td>
+            </tr><tr>
+              <td class="left">高阶三规划</td>
+              <td>9</td>
+              <td>44.4%</td>
+              <td class="red">22.2%🔴</td>
+              <td class="red">25.0%🔴</td>
+            </tr><tr>
+              <td class="left">小严老师初高阶提升课堂</td>
+              <td>7</td>
+              <td>85.7%</td>
+              <td>71.4%</td>
+              <td>0.0%</td>
+            </tr><tr>
+              <td class="left">初升高升学规划</td>
+              <td>7</td>
+              <td>85.7%</td>
+              <td>71.4%</td>
+              <td>0.0%</td>
+            </tr><tr>
+              <td class="left">初升高规划闫老师</td>
+              <td>6</td>
+              <td>66.7%</td>
+              <td>66.7%</td>
+              <td class="red">25.0%🔴</td>
+            </tr><tr>
+              <td class="left">王老师升学</td>
+              <td>5</td>
+              <td>0.0%</td>
+              <td class="red">0.0%🔴</td>
+              <td>0.0%</td>
+            </tr><tr>
+              <td class="left">高阶二规划</td>
+              <td>3</td>
+              <td>66.7%</td>
+              <td class="red">33.3%🔴</td>
+              <td class="red">40.0%🔴</td>
+            </tr><tr>
+              <td class="left">黄老师讲选科</td>
+              <td>2</td>
+              <td>100.0%</td>
+              <td>100.0%</td>
+              <td>0.0%</td>
+            </tr><tr>
+              <td class="left">孙老师思维课堂-一起考</td>
+              <td>1</td>
+              <td>0.0%</td>
+              <td class="red">0.0%🔴</td>
+              <td>0.0%</td>
+            </tr><tr>
+              <td class="left">超超老师讲选科</td>
+              <td>1</td>
+              <td>100.0%</td>
+              <td>100.0%</td>
+              <td class="red">66.7%🔴</td>
+            </tr></tbody>
+          </table>
+          </div>
+        </details><details open>
+          <summary>格物致知 <span class="ch-cnt">18 单</span></summary>
+          <div class="detail-body">
+          <table class="tbl">
+            <thead><tr><th class="left">达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead>
+            <tbody><tr>
+              <td class="left">樊老师读书分享</td>
+              <td>18</td>
+              <td>72.2%</td>
+              <td class="red">55.6%🔴</td>
+              <td class="red">21.7%🔴</td>
+            </tr></tbody>
+          </table>
+          </div>
+        </details><details open>
+          <summary>领航 <span class="ch-cnt">17 单</span></summary>
+          <div class="detail-body">
+          <table class="tbl">
+            <thead><tr><th class="left">达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead>
+            <tbody><tr>
+              <td class="left">邢老师讲选科</td>
+              <td>7</td>
+              <td>100.0%</td>
+              <td>100.0%</td>
+              <td class="red">22.2%🔴</td>
+            </tr><tr>
+              <td class="left">昭昭老师讲升学</td>
+              <td>6</td>
+              <td>100.0%</td>
+              <td>100.0%</td>
+              <td>14.3%</td>
+            </tr><tr>
+              <td class="left">赵主任讲女生规划</td>
+              <td>3</td>
+              <td>66.7%</td>
+              <td class="red">33.3%🔴</td>
+              <td>0.0%</td>
+            </tr><tr>
+              <td class="left">张利老师聊升学（慧润文化）</td>
+              <td>1</td>
+              <td>100.0%</td>
+              <td>100.0%</td>
+              <td>0.0%</td>
+            </tr></tbody>
+          </table>
+          </div>
+        </details><details open>
+          <summary>合肥徽起 <span class="ch-cnt">4 单</span></summary>
+          <div class="detail-body">
+          <table class="tbl">
+            <thead><tr><th class="left">达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead>
+            <tbody><tr>
+              <td class="left">初升高入团规划大课堂</td>
+              <td>4</td>
+              <td>75.0%</td>
+              <td>75.0%</td>
+              <td class="red">63.6%🔴</td>
+            </tr></tbody>
+          </table>
+          </div>
+        </details><details open>
+          <summary>山东深山 <span class="ch-cnt">1 单</span></summary>
+          <div class="detail-body">
+          <table class="tbl">
+            <thead><tr><th class="left">达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead>
+            <tbody><tr>
+              <td class="left">徐老师讲升学(欢喜）</td>
+              <td>1</td>
+              <td>100.0%</td>
+              <td>100.0%</td>
+              <td class="red">80.0%🔴</td>
+            </tr></tbody>
+          </table>
+          </div>
+        </details><details open>
+          <summary>自然流 <span class="ch-cnt">17 单</span></summary>
+          <div class="detail-body">
+          <table class="tbl">
+            <thead><tr><th class="left">达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead>
+            <tbody><tr>
+              <td class="left">未知达人</td>
+              <td>17</td>
+              <td>88.2%</td>
+              <td>70.6%</td>
+              <td class="red">39.3%🔴</td>
+            </tr></tbody>
+          </table>
+          </div>
+        </details>
+  </div>
+</div>
+
+<!-- ⑥ T+2活跃率 -->
+<div class="section">
+  <div class="section-header">⑥ T+2活跃率（全量）· 440/1025 = 42.9%</div>
+  <div class="section-body">
+    <div class="t2-cols">
+      <div class="t2-col">
+        <h4>按渠道</h4>
+        <div class="t2-row">
+          <div class="t2-label">最小年轮</div>
+          <div class="t2-bar-wrap"><div class="t2-bar-fill" style="width:43%"><span>43.1%</span></div></div>
+          <div class="t2-pct">417/968</div>
+        </div><div class="t2-row">
+          <div class="t2-label">格物致知</div>
+          <div class="t2-bar-wrap"><div class="t2-bar-fill" style="width:28%"><span>27.8%</span></div></div>
+          <div class="t2-pct">5/18</div>
+        </div><div class="t2-row">
+          <div class="t2-label">自然流</div>
+          <div class="t2-bar-wrap"><div class="t2-bar-fill" style="width:47%"><span>47.1%</span></div></div>
+          <div class="t2-pct">8/17</div>
+        </div><div class="t2-row">
+          <div class="t2-label">领航</div>
+          <div class="t2-bar-wrap"><div class="t2-bar-fill" style="width:41%"><span>41.2%</span></div></div>
+          <div class="t2-pct">7/17</div>
+        </div><div class="t2-row">
+          <div class="t2-label">合肥徽起</div>
+          <div class="t2-bar-wrap"><div class="t2-bar-fill" style="width:75%"><span>75.0%</span></div></div>
+          <div class="t2-pct">3/4</div>
+        </div><div class="t2-row">
+          <div class="t2-label">山东深山</div>
+          <div class="t2-bar-wrap"><div class="t2-bar-fill" style="width:0%"><span>0.0%</span></div></div>
+          <div class="t2-pct">0/1</div>
+        </div>
+      </div>
+      <div class="t2-col">
+        <h4>按年级</h4>
+        <div class="t2-row">
+          <div class="t2-label">新高一</div>
+          <div class="t2-bar-wrap"><div class="t2-bar-fill" style="width:46%"><span>45.5%</span></div></div>
+          <div class="t2-pct">414/909</div>
+        </div><div class="t2-row">
+          <div class="t2-label">新高二</div>
+          <div class="t2-bar-wrap"><div class="t2-bar-fill" style="width:25%"><span>24.7%</span></div></div>
+          <div class="t2-pct">20/81</div>
+        </div><div class="t2-row">
+          <div class="t2-label">新高三</div>
+          <div class="t2-bar-wrap"><div class="t2-bar-fill" style="width:17%"><span>17.1%</span></div></div>
+          <div class="t2-pct">6/35</div>
+        </div>
+      </div>
     </div>
-    <div style="overflow-x:auto"><table>
-      <thead><tr><th>城市线级</th><th>总量</th><th>年级分布</th></tr></thead>
-      <tbody><tr><td class="city-name">新一线</td><td class="city-total">52</td><td class="city-bar-cell"><div class="city-bar"><div class="city-seg" style="width:94.2%;background:#3b82f6" title="新高一:49">49</div><div class="city-seg" style="width:5.8%;background:#10b981" title="新高二:3">3</div></div></td></tr></tbody>
-    </table></div>
   </div>
+</div>
 
-  <div style="text-align:center;color:var(--muted);font-size:12px;padding:20px 0">
-    生成时间：2026-05-18 · amaze实时数据 + T+1 CSV · 春12期目标3300
+<!-- ⑦ 城市线级 -->
+<div class="section">
+  <div class="section-header">⑦ 城市线级分布（当日0517，正常班，共279单）</div>
+  <div class="section-body">
+    <div style="display:flex;gap:12px;margin-bottom:10px;font-size:12px">
+      <span>🔵 新高一</span><span>🟢 新高二</span><span>🟡 新高三</span>
+    </div>
+    <div class="scroll-wrap">
+    <table class="tbl">
+      <thead><tr><th class="left">城市线级</th><th>合计</th><th style="min-width:200px">年级分布</th></tr></thead>
+      <tbody><tr>
+      <td class="left">新一线</td>
+      <td>52</td>
+      <td style="padding:4px 10px"><div class="city-stacked"><div class="city-seg" style="width:94.2%;background:#2563cc" title="新高一:49">49</div><div class="city-seg" style="width:5.8%;background:#16a34a" title="新高二:3">3</div></div></td>
+    </tr></tbody>
+    </table>
+    </div>
   </div>
+</div>
+
+<div style="text-align:center;color:#8899bb;font-size:11px;padding:16px 0 24px">
+  生成时间：2026-05-18 · amaze截图 + T+1 CSV · 春12期目标3300
 </div>
 </body>
 </html>
